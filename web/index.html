@@ -1,0 +1,79 @@
+<html>
+<head><title>Formula proof</title></head>
+<body>
+
+
+<link rel="stylesheet" href="fp.css" type="text/css">
+
+<table border=0>
+<div class=banner><img src="bannertext.jpg"></div>
+</table>
+<br>
+<div class=headar1>
+Introduction
+</div>
+<p>
+A Proof is often described as a poem. This originally indicates the cunningness and artistic interactions it often takes to find ways to prove whatever we want to prove.
+Sadly, we often see proofs written as a poem, be it literally. Vague descriptions of why a certain property is what it is, not seldomly surrounded with intimidations, questioning the 
+intelligence of the reader, are no exception. A complete proof based on axioms only without any shortcuts can rarely be found. These shortcuts hide a lot of assumptions. We often think these assumptions
+ don't hide anything relevant... This kind of proof technique is sometimes used to prove such things as 1 = -1 and other invalid proofs.
+</p>
+<p>
+If anything, these proofs are a warning, that if we're not careful we may be proving something false.
+So if poems aren't the way to prove something, what is? 
+</p>
+<div class=headar1>
+Formal proof
+</div>
+<p>
+A formal proof, in this context, is to start from a formula or a set of formulas and prove the goal using these formulas and axioms only.
+Let there be no doubt, this is not an easy task.
+</p>
+<div class=headar1>
+How we do a formal proof here
+</div>
+<p>
+You start out by defining the axiomset you want to use.<br>
+What is to be proven we shall now call the goal.
+You start from no or several formulas that are true.
+Based on this you can now use axioms from the axiomset to get to the goal.
+<BR>
+We apply the formulas of the axioms to the current formula, this is then transformed to a new formula.
+After a chain of axioms applied to the current formula we transform it to become the goal.
+</p>
+<div class=headar1>
+How to protect against cheating
+</div>
+<p>
+It is important to protect against cheating against the axiomatic assumptions, so it is impossible to prove something that isn't true.(The assumptions must be true.)
+You start from a formula or multiple formulas that are true.
+Axioms will always create a new formula that is true.
+By not allowing the user to add a formula or only under very strict conditions it is impossible make a false proof.
+The problem is that the axioms must therefore only generate a proof that is true. If one of the assumptions in the axioms is wrong we can prove that true is false and therefore we can prove
+anything.
+<br>
+</p>
+<div class=headar1>
+An example proof
+</div>
+<p>
+Lets prove that (a + b)² = a² + 2ab + b²<br>
+<br>
+For clarity and disambiguity all functions will be prefix.
+<br><br>
+<pre>
+reflexiveEquation( ²(+(a , b) ) ) 							#this gives (a + b)² = (a + b)²
+²def (rightside of =) 									#(a + b)² = product((a + b),(a + b))
+²distributive sum (rightside of =, select product, always multiply with left side) 	#(a + b)² = product(a, (a + b)) + product(b, (a + b)) 
+²distributive sum (rightside of =, select product, always multiply with left side)	#(a + b)² = product(a, a) + product(a, b)) + product(b, a) + product(a, b))
+commutativity of product(product of b, a)						#(a + b)² = product(a, a) + product(a, b)) + product(a, b) + product(a, b))
+count(product(a,b))									#(a + b)² = product(a, a) + product(2,product(a, b)) + product(a, b))
+QED.											#(a + b)² = a² + 2ab + b² 
+
+</pre>
+
+</p>
+<a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=159223&amp;type=3" width="125" height="37" border="0" alt="SourceForge.net Logo" /></a>
+</body>
+</html>
+
