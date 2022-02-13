@@ -67,7 +67,7 @@ public class NaturalProofs
 		return equal;
 	}
 	
-	// (a - b)(a + b) = a² - b² 
+	// (a - b)(a + b) = a^2 - b^2
 	public static Formula cubicproof2(Formula a, Formula b) throws Exception
 	{
 		//(a - b)(a + b) = (a - b)(a + b)
