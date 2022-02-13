@@ -9,7 +9,7 @@ import axioms.*;
 public class LogicsProof {
 
 	public static void main(String[] args) throws Exception {
-		subsetImply();
+		System.out.println(subsetImply());
 	}
 	
 	//showing that a => (b => a ) is always true.

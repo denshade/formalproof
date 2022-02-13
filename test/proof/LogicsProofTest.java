@@ -1,10 +1,13 @@
-package test.proof;
+package proof;
 
-import proof.LogicsProof;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
-public class LogicsProofTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
+public class LogicsProofTest  {
+
+	@Test
 	public void testSubsetImply() {
 		try {
 			assertEquals(" ( a =>  ( b => a ) )", LogicsProof.subsetImply().toString());

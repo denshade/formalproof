@@ -1,31 +1,37 @@
-package test.proof;
+package proof;
 
-import junit.framework.TestCase;
-import proof.*;
+import org.junit.jupiter.api.Test;
 import utils.Formula;
 
-public class NaturalProofsTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
+public class NaturalProofsTest {
+
+	@Test
 	public void testCubicproof2() {
 		try {
 			Formula f = NaturalProofs.cubicproof2(new Formula("a"), new Formula("b"));
-			assertEquals(" (  (  ( a + b ) *  ( a - b ) ) =  (  ( a )² +  (  ( -1 *  ( b )² ) ) ) )", f.toString());
+			assertEquals(" (  (  ( a + b ) *  ( a - b ) ) =  (  ( a )ï¿½ +  (  ( -1 *  ( b )ï¿½ ) ) ) )", f.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			fail("Exception thrown "+e.getMessage());
 		}
 	}
 
+	@Test
 	public void testCubicproof() {
 		try {
 			Formula f = NaturalProofs.cubicproof(new Formula("a"), new Formula("b"));
-			assertEquals(" (  (  ( a + b ) )² =  (  ( a )² +  (  ( 2 *  ( a * b ) ) +  ( b )² ) ) )", f.toString());
+			assertEquals(" (  (  ( a + b ) )ï¿½ =  (  ( a )ï¿½ +  (  ( 2 *  ( a * b ) ) +  ( b )ï¿½ ) ) )", f.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			fail("Exception thrown "+e.getMessage());
 		}
 	
 	}
+
+	@Test
 	public void testsumOfTwoEvenNumbersIsEven() throws Exception
 	{
 		Formula f = NaturalProofs.sumOfTwoEvenNumbersIsEven(new Formula("a"), new Formula("b"));

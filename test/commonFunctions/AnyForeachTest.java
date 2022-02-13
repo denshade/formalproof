@@ -1,13 +1,15 @@
-package test.commonFunctions;
+package commonFunctions;
 
-import utils.Formula;
-import commonFunctions.Foreach;
 import commonSets.Naturals;
+import org.junit.jupiter.api.Test;
+import utils.Formula;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AnyForeachTest extends TestCase {
 
+public class AnyForeachTest  {
+
+	@Test
 	public void testToString() {
 		Foreach f = new Foreach("x", new Naturals(), new Formula("x=x"));
 		assertEquals("foreach(x element_of Naturals proposition x=x)"

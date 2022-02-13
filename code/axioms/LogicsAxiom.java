@@ -1,11 +1,9 @@
 package axioms;
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import commonFunctions.AnyNOT;
 import commonFunctions.Implies;
 import commonFunctions.NOT;
 import commonFunctions.OR;
-
 import utils.AnyFormula;
 import utils.Formula;
 
